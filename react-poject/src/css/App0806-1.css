@@ -1,0 +1,54 @@
+*{   /*米字號是套用到所有元素 讓他們都先清除 避免不同瀏覽器預設值不一致造成排版問題。*/
+    margin: 0; 
+    padding: 0;
+}
+.card{
+    width: 250px; 
+    margin: 10px; /*四邊各留 10px 的間距*/
+    transition: all .3s;
+}
+.card:hover{
+    border-radius: 5px; /* 圓角按鈕 */
+    transform: translateY(-5px);/*往上移動的位置*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+img{
+    width: 100%; /*讓圖片寬度自動撐滿外層容器*/
+    border-radius: 5px 5px 0 0; /* 圓角按鈕 */
+    height: 300px;         /* 固定高度 */
+    object-fit: cover;     /* 超出部分裁切*/
+    /* display: block;        移除空白 */
+}
+
+.card-title{
+    font-size: 24px;
+    margin: 10px 0; /*上下有 10px 的間距*/
+}
+
+.btn{
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* 去除超連結底線 */
+    background-color: #333;
+    padding: 10px; /* 內距 10px */
+    border-radius: 5px; /* 圓角按鈕 */
+    display: block;/*因為是超連結行內元素，所以轉成區塊元素，才可以設定寬高*/
+    text-align: center; /* 讓按鈕文字置中 */
+
+}
+
+.card-text{ /*卡片內文*/
+    margin-bottom: 20px;/*卡片內文與下方元件（例如按鈕）之間空出 20px 間距*/
+}
+.card-body{
+    padding-bottom: 30px; /*底部內縮*/
+    padding-left: 20px; /*左邊內縮*/
+    padding-right: 20px; /*右邊內縮*/
+}
+
+.container{
+    display: flex;
+    justify-content: center; /*讓內部的 .card 元素整體水平置中*/
+    margin: 50px;
+}

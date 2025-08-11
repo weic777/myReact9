@@ -1,0 +1,53 @@
+* {
+    /*米字號是套用到所有元素 讓他們都先清除 避免不同瀏覽器預設值不一致造成排版問題。*/
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    margin: 10px;
+    /*四邊各留 10px 的間距*/
+    display: flex;
+}
+
+.word {
+    
+    padding: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.img {
+    width: 100%;
+}
+
+.title {
+    align-items: center;
+    display: flex;
+    margin: 50px;
+    margin-bottom: 0;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid rgb(222, 222, 222);
+    background-color: rgb(246, 246, 246);
+}
+
+.container {
+    display: flex;
+    margin: 50px;
+    margin-top: 0;
+    border-radius: 0 0 10px 10px;
+    border: 1px  solid rgb(222, 222, 222);
+
+}
+
+h1 {
+    font-size: 32px;
+
+}
+

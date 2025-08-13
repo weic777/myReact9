@@ -8,7 +8,10 @@ import { createRoot } from 'react-dom/client'
 // import App from './pages/App0806-2';
 // import App from './pages/App0806-3';
 // import App from './pages/App0811-weather';
-import App from './pages/App0811-weather2'
+// import App from './pages/App0811-weather2'
+// import App from './pages/App0812-weather1'
+import './assets/all.scss'
+import App from './pages/App0813-weather1'
 
 
 

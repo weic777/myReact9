@@ -10,14 +10,19 @@ import { createRoot } from 'react-dom/client'
 // import App from './pages/App0811-weather';
 // import App from './pages/App0811-weather2'
 // import App from './pages/App0812-weather1'
-import './assets/all.scss'
-import App from './pages/App0813-weather1'
+// import './assets/all.scss'
+// import App from './pages/App0813-weather1'
+import App from './MyApp'
+import { HashRouter } from 'react-router-dom'
+
 
 
 
 createRoot(document.getElementById('root')).render(
   // 嚴謹模式
   <StrictMode>
+    <HashRouter>
     <App />
+    </HashRouter>
   </StrictMode>,
 )

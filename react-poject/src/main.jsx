@@ -12,7 +12,12 @@ import { createRoot } from 'react-dom/client'
 // import App from './pages/App0812-weather1'
 // import './assets/all.scss'
 // import App from './pages/App0813-weather1'
-import App from './MyApp'
+// import App from './MyApp'
+// import App from './pages/App0818-1';
+// import App from './pages/App0818-2';
+import App from './pages/App0818-3';
+
+
 import { HashRouter } from 'react-router-dom'
 
 

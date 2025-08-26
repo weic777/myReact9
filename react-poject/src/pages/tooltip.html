@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(180, 31, 76);
+            font-weight: 900;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .ttpShow {
+            display: none;
+
+        }
+
+        #ttpPanel {
+            background-color: rgb(141, 82, 100);
+            width: 200px;
+            text-align: left;
+            border: 3px solid rgb(247, 247, 247);
+            position: absolute;
+            z-index: 99;
+            padding: 15px;
+            display: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Tooltip</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo iure voluptatum quo quae eius quas sunt
+            porro? Atque vero quo sequi quae itaque vitae? Quod animi saepe ex adipisci nihil fugit perferendis
+            praesentium eveniet autem itaque. Quis neque quae doloribus, rerum repudiandae vero tenetur ea voluptatum
+            ipsa explicabo saepe id aliquid numquam enim unde similique officiis magni magnam quaerat expedita. Itaque
+            repudiandae, possimus ab nesciunt soluta molestias ducimus accusantium magnam in placeat perferendis
+            doloribus earum qui dolorem blanditiis hic praesentium ratione et aperiam at quia. Enim commodi
+            <a href="#">
+                eligendi
+                <span class="ttpShow">Tooltip內容</span>
+            </a>, saepe laborum ab quod totam deserunt repudiandae, quos sed, ipsa vitae atque inventore asperiores. Quo
+            reiciendis velit voluptatum odit, error tempora minima neque obcaecati debitis, voluptate magnam sit
+            quaerat, suscipit numquam rem a ex totam. Itaque neque voluptatum reiciendis libero aliquam ipsam culpa quae
+            consequatur totam.
+            <a href="#">
+                <img src="../assets/react.svg" alt="">
+                <span class="ttpShow">圖片說明</span>
+            </a>
+            
+            Mollitia voluptas neque expedita rem fuga animi magni, voluptate ipsam dolores nihil
+            fugiat dolorum ad numquam aperiam porro tempora velit veniam perspiciatis vero, quia facere nostrum
+            possimus, magnam dolorem! Pariatur ducimus in rerum facere assumenda nam doloremque maiores, rem fugiat
+            veritatis? <a href="#">
+                Ad
+                <span class="ttpShow">Tooltip內容</span>
+            </a>, corrupti. Numquam consequatur eligendi debitis illo exercitationem blanditiis error adipisci
+            aliquid quidem, in ipsum officiis minima dolorem accusantium expedita necessitatibus? Dolorum, similique
+            magni eum obcaecati possimus dolores exercitationem, officia vel fugit dolor, culpa illo nesciunt! Maxime
+            quis veritatis facere voluptas quidem dicta minima velit accusamus expedita dolores in consequuntur amet,
+            officiis ab iste sapiente necessitatibus asperiores tempore voluptates possimus a eveniet modi! Mollitia
+            ipsum consectetur ex veniam provident ut fuga porro ducimus quaerat soluta impedit, consequuntur nostrum
+            voluptas aperiam rerum a nisi numquam? Vel deleniti labore beatae veniam enim nesciunt est facere
+            consectetur, ullam reprehenderit recusandae adipisci non aliquam voluptates totam alias! Sed quae tenetur
+            perspiciatis natus dignissimos, inventore temporibus nostrum similique earum architecto suscipit, optio eos
+            dolore tempora illum. Eum ut dolorum consequuntur.
+        </p>
+    </div>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- 自己寫的 -->
+    <script>
+        $(function () {
+            // has是檢查是否有這個指定的名稱
+            $('a:has(.ttpShow)').mouseover(function (e) {
+                $('body').append('<div id="ttpPanel">' + $(this).children('.ttpShow').html() + '<div>')
+                $('#ttpPanel').css({ top: (e.pageY + 10) + 'px', left: (e.pageX + 10) + 'px', }).fadeIn('fast');
+            }).mousemove(function (e) {
+                $('#ttpPanel').css({ top: (e.pageY + 10) + 'px', left: (e.pageX + 10) + 'px', });
+            }).mouseout(function () {
+                $('#ttpPanel').remove();
+            })
+        })
+    </script>
+</body>
+
+</html>

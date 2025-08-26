@@ -1,0 +1,26 @@
+a {
+            text-decoration: none;
+            color: rgb(180, 31, 76);
+            font-weight: 900;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .ttpShow {
+            display: none;
+
+        }
+
+        #ttpPanel {
+            background-color: rgb(141, 82, 100);
+            width: 200px;
+            text-align: left;
+            border: 3px solid rgb(247, 247, 247);
+            position: absolute;
+            z-index: 99;
+            padding: 15px;
+            display: none;
+            color: white;
+        }

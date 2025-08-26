@@ -21,7 +21,11 @@ import { createRoot } from 'react-dom/client'
 // import App from './pages/App0819-3';
 // import App from './pages/App0820-1';
 // import App from './pages/App0825-localstorage';
-import App from './pages/App0825-localstorage2';
+// import App from './pages/App0825-localstorage2';
+// import App from './pages/App0826-jquery1';
+// import App from './pages/App0826-slide';
+import App from './pages/App0826-tooltip';
+
 
 
 
